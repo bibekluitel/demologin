@@ -1,0 +1,76 @@
+.login-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    
+}
+.form-holder{
+    width: 50%;
+    min-width: 400px;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(30, 30, 30, 0.2);
+ }
+
+ .username{
+     width: 100%;
+     box-sizing: border-box;
+     padding: 20px 40px;
+     background-color: rgba(117, 117, 146, 0.2);
+     display: flex;
+     justify-content: flex-start;
+    font-family: 'Courier New', Courier, monospace;
+
+ }
+
+ .username label{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+ }
+ .username input{
+     width: 50%;
+     font-size: 20px;
+     line-height: 40px;
+ }
+ .password{
+     width: 100%;
+     box-sizing: border-box;
+     padding: 20px 40px;
+     background-color: rgba(10, 10, 10, 0.2);
+     display: flex;
+     justify-content: flex-start;
+    font-family: 'Courier New', Courier, monospace;
+
+ }
+ .password label{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+ }
+ .password input{
+    width: 50%;
+    font-size: 20px;
+    line-height: 40px;
+ }
+ .button-container{
+     width: 100%;
+     box-sizing: border-box;
+     padding: 40px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
