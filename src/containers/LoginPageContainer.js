@@ -26,6 +26,8 @@ LoginPageContainer.defaultProps = {
 };
 
 const mapStateToProps = (state) => {
-    return { user: state };
+    console.log(state);
+
+    return { user: state.user };
 };
 export default connect(mapStateToProps, { ...loginActions })(LoginPageContainer);

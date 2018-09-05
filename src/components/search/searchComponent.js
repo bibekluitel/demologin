@@ -19,14 +19,29 @@ class SearchComponent extends Component {
         this.setState({ searchText: searchText });
     }
 
-    search = () => {
-        const searchText = this.searchBox.value;
-        this.props.searchItemTunk({ searchText: searchText });
+    onNextPage = () => {
+
+    }
+
+    onPrevPAge = () => {
+
     }
 
     getPlanetList = (list) => {
         if (!list) { return null; }
         return list.map((item, key) => <p key={key}> {item} </p>);
+    }
+    getButon = (panelList) => {
+        if (panelList) {
+            return <div className='button-container'>
+                <Button variant="contained" color="disabled" onClick={this.onPrev}>
+                    prevPage
+                </Button>
+                <Button variant="contained" color="disabled" onClick={this.onNext}>
+                    nextPage
+                </Button>
+            </div>;
+        }
     }
 
     render() {
@@ -42,9 +57,6 @@ class SearchComponent extends Component {
             </Paper>
 
             <Paper className='search-content' >
-                <Button variant="contained" color="disabled" onClick={this.search}>
-                    Search
-                </Button>
                 <div className='search'>
                     <input
                         type="text" name="name"
@@ -56,6 +68,7 @@ class SearchComponent extends Component {
                 <div className='content'>
                     {this.getPlanetList(planetList)}
                 </div>
+
             </Paper>
         </div>
     }

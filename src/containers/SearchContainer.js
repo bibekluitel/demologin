@@ -10,12 +10,12 @@ class SearchContainer extends Component {
 
 
     render() {
-        const { user, searchResults } = this.props;
+        const { user, search } = this.props;
         if (!user.name) {
             return <Redirect to="/" />
         }
 
-        const getListofPlanets = searchResults ? searchResults.map(planet => planet.name) : null;
+        const getListofPlanets = search.currentPageResults ? search.currentPageResults.map(planet => planet.name) : null;
 
         return <SearchComponent {...this.props} planetList={getListofPlanets} />;
     }
@@ -30,8 +30,6 @@ SearchContainer.defaultProps = {
 };
 
 const mapStateToProps = (state) => {
-    console.log(state);
-
-    return { user: state, searchResults: state.searchResult };
+    return state;
 };
 export default connect(mapStateToProps, { ...searchActions, ...loginActions })(SearchContainer);

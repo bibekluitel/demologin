@@ -17,8 +17,8 @@ const loadState = () => {
             return undefined;
         }
         const state = {
-            ...JSON.parse(serializedState),
-            searchResult: null
+            user: JSON.parse(serializedState),
+            search: {}
         }
         return state;
     } catch (err) {
@@ -28,7 +28,7 @@ const loadState = () => {
 
 const saveState = (state) => {
     try {
-        const serializedState = JSON.stringify(state);
+        const serializedState = JSON.stringify(state.user);
         localStorage.setItem('user', serializedState);
     } catch (err) {
         // Ignore write errors.

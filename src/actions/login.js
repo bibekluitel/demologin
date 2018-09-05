@@ -1,10 +1,12 @@
+import * as actionTypes from './../constants/actionConstants';
+
 export const login = (payload) => ({
-    type: 'USER_LOGIN',
+    type: actionTypes.USER_LOGIN,
     payload
 });
 
 export const logout = () => ({
-    type: 'USER_LOGOUT'
+    type: actionTypes.USER_LOGOUT
 });
 
 export const makeGetRequest = (url) => {
